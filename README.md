@@ -88,4 +88,6 @@ Sales Target =
 3. Use slicers to interact with the dashboard and explore insights  
 
 ## Dashboard Preview
-![Dashboard](screenshot.png)
+[![Dashboard](screenshot.png)](https://github.com/sharmakim151-code/sales-analytics-dashboard-powerbi/blob/main/final%20dashboard%20sales.png)
+
+## Dashboard Demo: https://youtu.be/a_GfOACsazM 
