@@ -4,7 +4,7 @@
 ![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-An end-to-end interactive sales analytics dashboard built in Power BI with DAX measures, drill-down analysis, Top N filtering, and 8+ chart types — designed to help business teams monitor performance and make data-driven decisions.
+An end-to-end interactive sales analytics dashboard built in Power BI with DAX measures, drill-down analysis, Top N filtering, and 8+ chart types, designed to help business teams monitor performance and make data-driven decisions.
 
 **Live demo:** https://youtu.be/a_GfOACsazM
 
@@ -12,7 +12,7 @@ An end-to-end interactive sales analytics dashboard built in Power BI with DAX m
 
 ## The business question
 
-How do we give sales teams a single view of performance — by product, region, time, and payment method — without manually updating reports every week?
+How do we give sales teams a single view of performance, by product, region, time, and payment method, without manually updating reports every week?
 
 ---
 
@@ -29,7 +29,7 @@ How do we give sales teams a single view of performance — by product, region, 
 
 ## Key findings from the data
 
-- Top 3 mobile models account for a disproportionate share of revenue — identified using Top N dynamic filtering
+- Top 3 mobile models account for a disproportionate share of revenue, identified using Top N dynamic filtering
 - Sales vs target gap visualised using a gauge chart with a 5% growth target DAX measure
 - Drill-down from monthly to daily trend reveals day-of-week patterns invisible in aggregate views
 
