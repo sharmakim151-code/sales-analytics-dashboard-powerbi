@@ -1,93 +1,101 @@
-# Sales Analytics Dashboard - Power BI
+# Sales Analytics Dashboard — Power BI
 
-## Project Overview
-This project is an interactive Sales Analytics Dashboard built using Power BI. It provides insights into sales performance, customer behavior, and product trends. The dashboard is designed with a focus on usability, performance optimization, and clear data visualization.
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-## Objectives
-- Analyze overall sales performance  
-- Track total quantity and transactions  
-- Identify top-performing products  
-- Understand customer ratings and payment preferences  
-- Monitor sales trends over time  
+An end-to-end interactive sales analytics dashboard built in Power BI with DAX measures, drill-down analysis, Top N filtering, and 8+ chart types — designed to help business teams monitor performance and make data-driven decisions.
 
-## Key Metrics (DAX Measures)
+**Live demo:** https://youtu.be/a_GfOACsazM
 
-### Total Sales
-```DAX
-Total_Sales = 
-SUMX('Sales Data', 'Sales Data'[Units Sold] * 'Sales Data'[Price Per Unit])
+---
+
+## The business question
+
+How do we give sales teams a single view of performance — by product, region, time, and payment method — without manually updating reports every week?
+
+---
+
+## Key metrics at a glance
+
+| Metric | Value |
+|---|---|
+| Chart types | 8+ |
+| DAX measures | 4 |
+| Interactive slicers | 5 |
+| Drill-down levels | 2 (month → date) |
+
+---
+
+## Key findings from the data
+
+- Top 3 mobile models account for a disproportionate share of revenue — identified using Top N dynamic filtering
+- Sales vs target gap visualised using a gauge chart with a 5% growth target DAX measure
+- Drill-down from monthly to daily trend reveals day-of-week patterns invisible in aggregate views
+
+---
+
+## DAX measures
+
+```dax
+Total_Sales = SUMX('Sales Data', 'Sales Data'[Units Sold] * 'Sales Data'[Price Per Unit])
+
+Total_Quantity = SUM('Sales Data'[Units Sold])
+
+Total_Transactions = COUNTROWS('Sales Data')
+
+Sales_Target = [Total_Sales] * 1.05
 ```
 
-### Total Quantity
-```DAX
-Total_Quantity = 
-SUM('Sales Data'[Units Sold])
-```
+---
 
-### Total Transactions
-```DAX
-Total_Transactions = 
-COUNTROWS('Sales Data')
-```
+## Dashboard features
 
-### Sales Target (5% Growth)
-```DAX
-Sales Target = 
-[Total_Sales] * 1.05
-```
+### KPI cards
+- Total Sales, Total Quantity, Total Transactions, Average Price
+- All built as DAX measures (not calculated columns) for performance optimisation
 
-## Dashboard Features
+### Visualisations
+- **Map** — city-wise sales distribution
+- **Line chart** — units sold with month → date drill-down
+- **Column chart** — top 3 products by sales using Top N filter
+- **Pie chart** — transactions by payment method
+- **Funnel chart** — customer rating analysis
+- **Gauge chart** — actual sales vs 5% growth target
 
-### KPI Cards
-- Total Sales (formatted to 0 decimal places)
-- Total Quantity
-- Total Transactions
-- Average Price
+### Interactivity
+- Month slicer with button-style tile navigation
+- Mobile model, payment method, brand, and day name filters
+- All visuals cross-filter each other dynamically
 
-### Visualizations
-- Map showing city-wise sales distribution  
-- Line chart for units sold with drill-down (month to date)  
-- Column chart displaying top 3 mobile models by sales using Top N filter  
-- Pie chart for transaction distribution by payment method  
-- Funnel chart for customer rating analysis  
-- Gauge chart comparing actual sales vs target  
-- Day-wise sales trend analysis  
+---
 
-## Filters and Interactivity
-- Month slicer with button-style navigation  
-- Mobile Model filter  
-- Payment Method filter  
-- Brand filter  
-- Day Name filter  
+## What I learned
 
-## Design and Layout
-- Custom background and branding (logo)  
-- Tile-based layout using a 4-column grid  
-- Consistent styling across visuals using format painter  
-- Clean and structured dashboard for better readability  
+- **DAX measures over calculated columns** — avoids row-context errors and improves model performance
+- **Top N filtering** for dynamic product ranking without hardcoding values
+- **Drill-down hierarchy** setup for time-based analysis (month → date)
+- **Format painter** to maintain visual consistency across 8+ chart types
 
-## Key Learnings
-- Used DAX measures instead of calculated columns to optimize performance  
-- Implemented drill-down functionality for detailed time analysis  
-- Applied Top N filtering for dynamic ranking of products  
-- Improved user experience through structured layout and interactive slicers  
+---
 
-## Tools and Technologies
-- Power BI  
-- DAX (Data Analysis Expressions)  
-- Data Visualization  
+## Tools used
 
-## Future Enhancements
-- Add month-over-month and year-over-year analysis  
-- Implement dynamic tooltips  
-- Integrate larger or real-time datasets  
+- Power BI Desktop
+- DAX (Data Analysis Expressions)
 
-## How to Use
-1. Download the .pbix file from this repository  
-2. Open it using Power BI Desktop  
-3. Use slicers to interact with the dashboard and explore insights  
+---
 
-## Dashboard Preview
-[![Dashboard](screenshot.png)](https://github.com/sharmakim151-code/sales-analytics-dashboard-powerbi/blob/main/final%20dashboard%20sales.png)
+## How to run
 
-## Dashboard Demo: https://youtu.be/a_GfOACsazM 
+1. Download the `.pbix` file from this repo
+2. Open in Power BI Desktop (free download from Microsoft)
+3. Use the slicers to explore the data interactively
+
+---
+
+## About me
+
+I'm a Data Analyst with 7+ years of experience in EdTech analytics, transitioning into a full-time Data / Business Analyst role. Currently open to opportunities in Bengaluru or remote.
+
+Connect with me on [LinkedIn](https://linkedin.com/in/diksha-sharma-ab2081127)
